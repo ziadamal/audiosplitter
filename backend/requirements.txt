@@ -1,0 +1,31 @@
+# FastAPI and server
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+python-multipart==0.0.9
+aiofiles==23.2.1
+
+# Audio processing
+demucs==4.0.1
+torch>=2.0.0
+torchaudio>=2.0.0
+pyannote.audio==3.1.1
+speechbrain==1.0.0
+pydub==0.25.1
+librosa==0.10.1
+soundfile==0.12.1
+scipy==1.12.0
+numpy>=1.24.0
+
+# Task queue
+celery==5.3.6
+redis==5.0.1
+
+# Utilities
+pydantic==2.6.1
+pydantic-settings==2.1.0
+python-dotenv==1.0.1
+boto3==1.34.34  # For S3 storage (optional)
+
+# Dev dependencies
+pytest==8.0.0
+httpx==0.26.0
