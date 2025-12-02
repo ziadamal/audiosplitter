@@ -51,13 +51,15 @@ app = FastAPI(
 )
 
 # Configure CORS
+# CORS middleware - Allow all origins for now
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=["*"],  # Allow all origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Mount static files for serving audio
 app.mount("/audio", StaticFiles(directory=str(settings.output_dir)), name="audio")
